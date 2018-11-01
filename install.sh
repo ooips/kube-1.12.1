@@ -49,5 +49,5 @@ kubeadm reset
 
 kubeadm init --kubernetes-version=v1.12.1 --pod-network-cidr=192.168.0.0/16 --apiserver-advertise-address=0.0.0.0
 
-kubectl create -f calico.yaml
-kubectl create -f rbac-kdd.yaml
+kubectl create -f ./yml/calico.yaml
+kubectl create -f ./yml/rbac-kdd.yaml
