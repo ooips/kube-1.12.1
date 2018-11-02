@@ -1,7 +1,11 @@
 
 cd kube-1.12.1
 
-yum install -y ./images/*.rpm
+yum install -y ./rpm/*.rpm
+
+systemctl daemon-reload && systemctl restart docker && systemctl enable docker
+
+systemctl enable kubelet && systemctl start kubelet
 
 docker pull spwanghub/kube-1.12.1:kube-apiserver
 docker pull spwanghub/kube-1.12.1:kube-controller-manager
